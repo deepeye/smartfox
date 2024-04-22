@@ -1,7 +1,7 @@
 # base image
 FROM python:3.10-slim-bookworm AS base
 
-LABEL maintainer="takatost@gmail.com"
+LABEL maintainer="cndeepeye@gmail.com"
 
 # install packages
 FROM base as packages
