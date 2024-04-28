@@ -7,7 +7,7 @@ const AppList = async () => {
 }
 
 export const metadata = {
-  title: 'Datasets - DeepEye',
+  title: 'Datasets - GRASP',
 }
 
 export default AppList

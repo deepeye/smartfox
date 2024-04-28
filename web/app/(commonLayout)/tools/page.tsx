@@ -9,7 +9,7 @@ const Layout: FC = () => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('tools.title')} - DeepEye`
+    document.title = `${t('tools.title')} - GRASP`
   }, [])
 
   return (

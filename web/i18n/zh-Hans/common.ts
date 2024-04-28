@@ -147,7 +147,7 @@ const translation = {
     newPassword: '新密码',
     notEqual: '两个密码不相同',
     confirmPassword: '确认密码',
-    langGeniusAccount: 'DeepEye 账号',
+    langGeniusAccount: 'GRASP 账号',
     langGeniusAccountTip: '您的 DeepEye 账号和相关的用户数据。',
     editName: '编辑名字',
     showAppLength: '显示 {{length}} 个应用',
