@@ -2,7 +2,7 @@ version: '3'
 services:
   # API service
   api:
-    image: hifelix2023/deepeye-api:0.6.4
+    image: grasp-api:0.6.4
     restart: always
     environment:
       # Startup mode, 'api' starts the API server.
@@ -146,7 +146,7 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: hifelix2023/deepeye-api:0.6.4
+    image: grasp-api:0.6.4
     restart: always
     environment:
       # Startup mode, 'worker' starts the Celery worker for processing the queue.
@@ -234,7 +234,7 @@ services:
 
   # Frontend web application.
   web:
-    image: hifelix2023/deepeye-web:0.6.4
+    image: grasp-web:0.6.4
     restart: always
     environment:
       EDITION: SELF_HOSTED
@@ -357,5 +357,5 @@ services:
       - api
       - web
     ports:
-      - "80:80"
+      - "8081:80"
       #- "443:443"

@@ -2,7 +2,7 @@
 
 # 定义源目录和目标目录
 source_dir="./api"
-target_dir="./dist"
+target_dir="./dist/api"
 extensions=(".yaml" ".svg" ".txt" ".__builtin__" ".json" ".md" ".png" ".sh" ".ini" ".mako" ".html" ".gitignore" ".dockerignore" ".toml" "env")  # 定义一个数组，包含所有想要复制的文件扩展名
 
 # 循环每个扩展名
