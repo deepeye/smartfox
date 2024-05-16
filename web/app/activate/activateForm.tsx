@@ -85,7 +85,7 @@ const ActivateForm = () => {
           timezone,
         },
       })
-      setLocaleOnClient(language.startsWith('en') ? 'en' : 'zh-Hans', false)
+      setLocaleOnClient(language.startsWith('en') ? 'en-US' : 'zh-Hans', false)
       setShowSuccess(true)
     }
     catch {

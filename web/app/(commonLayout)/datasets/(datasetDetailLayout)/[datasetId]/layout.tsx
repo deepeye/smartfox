@@ -25,7 +25,6 @@ import Link from 'next/link'
 import s from './style.module.css'
 import { fetchDatasetDetail, fetchDatasetRelatedApps } from '@/service/datasets'
 import type { RelatedApp, RelatedAppResponse } from '@/models/datasets'
-import { getLocaleOnClient } from '@/i18n'
 import AppSideBar from '@/app/components/app-sidebar'
 import Divider from '@/app/components/base/divider'
 import AppIcon from '@/app/components/base/app-icon'
@@ -37,6 +36,7 @@ import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import { useStore } from '@/app/components/app/store'
 import { AiText, ChatBot, CuteRobote } from '@/app/components/base/icons/src/vender/solid/communication'
 import { Route } from '@/app/components/base/icons/src/vender/solid/mapsAndTravel'
+import { getLocaleOnClient } from '@/i18n'
 
 export type IAppDetailLayoutProps = {
   children: React.ReactNode
@@ -200,7 +200,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
       document.title = `${datasetRes.name || 'Dataset'} - Dify`
   }, [datasetRes])
 
-  const { setAppSiderbarExpand } = useStore()
+  const setAppSiderbarExpand = useStore(state => state.setAppSiderbarExpand)
 
   useEffect(() => {
     const localeMode = localStorage.getItem('app-detail-collapse-or-expand') || 'expand'
