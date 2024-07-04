@@ -47,4 +47,4 @@ const GithubStar = () => {
   )
 }
 
-export default GithubStar
+// export default GithubStar
