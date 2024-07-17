@@ -32,8 +32,8 @@
       "value": "es-ES",
       "name": "Español (España)",
       "prompt_name": "Spanish",
-      "example": "Saluton, Deepeye!",
-      "supported": false
+      "example": "Saluton, Dify!",
+      "supported": true
     },
     {
       "value": "fr-FR",
@@ -75,7 +75,7 @@
       "name": "Italiano (Italia)",
       "prompt_name": "Italian",
       "example": "Ciao, Dify!",
-      "supported": false
+      "supported": true
     },
     {
       "value": "th-TH",
