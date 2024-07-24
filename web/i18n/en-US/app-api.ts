@@ -30,7 +30,7 @@ const translation = {
   },
   completionMode: {
     title: 'Completion App API',
-    info: 'For high-quality text generation, such as articles, summaries, and translations, use the completion-messages API with user input. Text generation relies on the model parameters and prompt templates set in Dify Prompt Engineering.',
+    info: 'For high-quality text generation, such as articles, summaries, and translations, use the completion-messages API with user input. Text generation relies on the model parameters and prompt templates set in Deepeye Prompt Engineering.',
     createCompletionApi: 'Create Completion Message',
     createCompletionApiTip: 'Create a Completion Message to support the question-and-answer mode.',
     inputsTips: '(Optional) Provide user input fields as key-value pairs, corresponding to variables in Prompt Eng. Key is the variable name, Value is the parameter value. If the field type is Select, the submitted Value must be one of the preset choices.',

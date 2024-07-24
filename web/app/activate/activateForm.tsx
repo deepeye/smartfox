@@ -109,9 +109,9 @@ const ActivateForm = () => {
             <h2 className="text-[32px] font-bold text-gray-900">{t('login.invalid')}</h2>
           </div>
           <div className="w-full mx-auto mt-6">
-            <Button variant='primary' className='w-full !text-sm'>
+            {/* <Button variant='primary' className='w-full !text-sm'>
               <a href="https://dify.ai">{t('login.explore')}</a>
-            </Button>
+            </Button> */}
           </div>
         </div>
       )}
@@ -205,11 +205,11 @@ const ActivateForm = () => {
               <div className="block w-hull mt-2 text-xs text-gray-600">
                 {t('login.license.tip')}
                 &nbsp;
-                <Link
+                {/* <Link
                   className='text-primary-600'
                   target='_blank' rel='noopener noreferrer'
                   href={`https://docs.dify.ai/${language !== LanguagesSupported[1] ? 'user-agreement' : `v/${locale.toLowerCase()}/policies`}/open-source`}
-                >{t('login.license.link')}</Link>
+                >{t('login.license.link')}</Link> */}
               </div>
             </div>
           </div>
