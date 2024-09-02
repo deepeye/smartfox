@@ -404,7 +404,7 @@ const TextGeneration: FC<IMainProps> = ({
       if (canReplaceLogo)
         document.title = `${siteInfo.title}`
       else
-        document.title = `${siteInfo.title} - Powered by Deepeye`
+        document.title = `${siteInfo.title} - Powered by Smartfox`
     }
   }, [siteInfo?.title, canReplaceLogo])
 

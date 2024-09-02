@@ -57,7 +57,7 @@ const Datasets = ({
 
   useEffect(() => {
     loadingStateRef.current = isLoading
-    document.title = `${t('dataset.knowledge')} - Deepeye`
+    document.title = `${t('dataset.knowledge')} - Smartfox`
   }, [isLoading])
 
   useEffect(() => {

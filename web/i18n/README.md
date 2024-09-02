@@ -80,13 +80,13 @@ export const languages = [
   {
     value: 'en-US',
     name: 'English(United States)',
-    example: 'Hello, Deepeye!',
+    example: 'Hello, Smartfox!',
     supported: true,
   },
   {
     value: 'zh-Hans',
     name: '简体中文',
-    example: '你好，Deepeye！',
+    example: '你好，Smartfox！',
     supported: true,
   },
   {
@@ -98,7 +98,7 @@ export const languages = [
   {
     value: 'es-ES',
     name: 'Español(España)',
-    example: 'Saluton, Deepeye!',
+    example: 'Saluton, Smartfox!',
     supported: false,
   },
   {

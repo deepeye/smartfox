@@ -49,7 +49,7 @@ const Chatbot = () => {
       if (customConfig)
         document.title = `${site.title}`
       else
-        document.title = `${site.title} - Powered by Deepeye`
+        document.title = `${site.title} - Powered by Smartfox`
     }
   }, [site, customConfig])
 
