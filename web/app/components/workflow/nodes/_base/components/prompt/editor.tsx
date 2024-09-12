@@ -30,7 +30,8 @@ import s from '@/app/components/app/configuration/config-prompt/style.module.css
 import { useEventEmitterContextContext } from '@/context/event-emitter'
 import { PROMPT_EDITOR_INSERT_QUICKLY } from '@/app/components/base/prompt-editor/plugins/update-block'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
-import TooltipPlus from '@/app/components/base/tooltip-plus'
+import ActionButton from '@/app/components/base/action-button'
+import Tooltip from '@/app/components/base/tooltip'
 import CodeEditor from '@/app/components/workflow/nodes/_base/components/editor/code-editor/editor-support-vars'
 import Switch from '@/app/components/base/switch'
 import { Jinja } from '@/app/components/base/icons/src/vender/workflow'
@@ -128,7 +129,7 @@ const Editor: FC<Props> = ({
     <Wrap className={cn(className, wrapClassName)} style={wrapStyle} isInNode isExpand={isExpand}>
       <div ref={ref} className={cn(isFocus ? s.gradientBorder : 'bg-gray-100', isExpand && 'h-full', '!rounded-[9px] p-0.5')}>
         <div className={cn(isFocus ? 'bg-gray-50' : 'bg-gray-100', isExpand && 'h-full flex flex-col', 'rounded-lg')}>
-          <div className={cn(headerClassName, 'pt-1 pl-3 pr-2 flex justify-between h-6 items-center')}>
+          <div className={cn(headerClassName, 'pt-1 pl-3 pr-2 flex justify-between items-center')}>
             <div className='leading-4 text-xs font-semibold text-gray-700 uppercase'>{title}</div>
             <div className='flex items-center'>
               <div className='leading-[18px] text-xs font-medium text-gray-500'>{value?.length || 0}</div>
@@ -138,16 +139,16 @@ const Editor: FC<Props> = ({
 
               <div className='w-px h-3 ml-2 mr-2 bg-gray-200'></div>
               {/* Operations */}
-              <div className='flex items-center space-x-2'>
+              <div className='flex items-center space-x-[2px]'>
                 {isSupportJinja && (
-                  <TooltipPlus
+                  <Tooltip
                     popupContent={
                       <div>
                         <div>{t('workflow.common.enableJinja')}</div>
                         <a className='text-[#155EEF]' target='_blank' href='https://jinja.palletsprojects.com/en/2.10.x/'>{t('workflow.common.learnMore')}</a>
                       </div>
                     }
-                    hideArrow
+                    needsDelay
                   >
                     <div className={cn(editionType === EditionType.jinja2 && 'border-black/5 bg-white', 'flex h-[22px] items-center px-1.5 rounded-[5px] border border-transparent hover:border-black/5 space-x-0.5')}>
                       <Jinja className='w-6 h-3 text-gray-300' />
@@ -159,25 +160,33 @@ const Editor: FC<Props> = ({
                         }}
                       />
                     </div>
-                  </TooltipPlus>
+                  </Tooltip>
 
                 )}
                 {!readOnly && (
-                  <TooltipPlus
+                  <Tooltip
                     popupContent={`${t('workflow.common.insertVarTip')}`}
                   >
-                    <Variable02 className='w-3.5 h-3.5 text-gray-500 cursor-pointer' onClick={handleInsertVariable} />
-                  </TooltipPlus>
+                    <ActionButton onClick={handleInsertVariable}>
+                      <Variable02 className='w-4 h-4' />
+                    </ActionButton>
+                  </Tooltip>
                 )}
                 {showRemove && (
-                  <RiDeleteBinLine className='w-3.5 h-3.5 text-gray-500 cursor-pointer' onClick={onRemove} />
+                  <ActionButton onClick={onRemove}>
+                    <RiDeleteBinLine className='w-4 h-4' />
+                  </ActionButton>
                 )}
                 {!isCopied
                   ? (
-                    <Clipboard className='w-3.5 h-3.5 text-gray-500 cursor-pointer' onClick={handleCopy} />
+                    <ActionButton onClick={handleCopy}>
+                      <Clipboard className='w-4 h-4' />
+                    </ActionButton>
                   )
                   : (
-                    <ClipboardCheck className='mx-1 w-3.5 h-3.5 text-gray-500' />
+                    <ActionButton>
+                      <ClipboardCheck className='w-4 h-4' />
+                    </ActionButton>
                   )
                 }
                 <ToggleExpandBtn isExpand={isExpand} onExpandChange={setIsExpand} />

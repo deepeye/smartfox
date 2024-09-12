@@ -1,9 +1,20 @@
 from .segment_group import SegmentGroup
-from .segments import NoneSegment, Segment
+from .segments import (
+    ArrayAnySegment,
+    ArraySegment,
+    FloatSegment,
+    IntegerSegment,
+    NoneSegment,
+    ObjectSegment,
+    Segment,
+    StringSegment,
+)
 from .types import SegmentType
 from .variables import (
-    ArrayVariable,
-    FileVariable,
+    ArrayAnyVariable,
+    ArrayNumberVariable,
+    ArrayObjectVariable,
+    ArrayStringVariable,
     FloatVariable,
     IntegerVariable,
     NoneVariable,
@@ -14,17 +25,25 @@ from .variables import (
 )
 
 __all__ = [
-    'IntegerVariable',
-    'FloatVariable',
-    'ObjectVariable',
-    'SecretVariable',
-    'FileVariable',
-    'StringVariable',
-    'ArrayVariable',
-    'Variable',
-    'SegmentType',
-    'SegmentGroup',
-    'Segment',
-    'NoneSegment',
-    'NoneVariable',
+    "IntegerVariable",
+    "FloatVariable",
+    "ObjectVariable",
+    "SecretVariable",
+    "StringVariable",
+    "ArrayAnyVariable",
+    "Variable",
+    "SegmentType",
+    "SegmentGroup",
+    "Segment",
+    "NoneSegment",
+    "NoneVariable",
+    "IntegerSegment",
+    "FloatSegment",
+    "ObjectSegment",
+    "ArrayAnySegment",
+    "StringSegment",
+    "ArrayStringVariable",
+    "ArrayNumberVariable",
+    "ArrayObjectVariable",
+    "ArraySegment",
 ]
