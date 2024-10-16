@@ -82,7 +82,7 @@ const Apps = () => {
   ]
 
   useEffect(() => {
-    document.title = `${t('common.menus.apps')} -  Smartfox`
+    document.title = `${t('common.menus.apps')} -  SmartFox`
     if (localStorage.getItem(NEED_REFRESH_APP_LIST_KEY) === '1') {
       localStorage.removeItem(NEED_REFRESH_APP_LIST_KEY)
       mutate()
