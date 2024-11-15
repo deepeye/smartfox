@@ -20,6 +20,13 @@
       "prompt_name": "Chinese Traditional",
       "example": "你好，Smartfox！",
       "supported": true
+    },
+    {
+      "value": "sl-SI",
+      "name": "Slovensko (Slovenija)",
+      "prompt_name": "Slovensko",
+      "example": "Zdravo, Dify!",
+      "supported": true
     }
   ]
 }
